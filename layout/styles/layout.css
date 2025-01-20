@@ -201,10 +201,18 @@ Delete it completely to stop fading
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:fixed; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
-#mainav{position:relative; margin-bottom:-30px; padding:0; z-index:999;}
+#mainav {
+	position: fixed;
+	top: 20;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
 #mainav ul{text-transform:uppercase;}
 #mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none; text-align:left;}
 #mainav ul ul ul{left:180px; top:0;}
